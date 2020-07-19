@@ -11,7 +11,7 @@ export default  () => {
         try{
             console.log('get repositories called')
             const repositories = await api.get();
-            console.log(repositories.data);
+            console.log(repositories);
             setResults(repositories);
         }
         catch(err){

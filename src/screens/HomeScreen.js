@@ -4,7 +4,7 @@ import useResults from '../components/result';
 
 const HomeScreen = ({navigation}) => {
     const [getRepositories , results , errorMessage] = useResults();
-
+console.log(results.data);
     return <View>
                 <View style={styles.buttonStyle}>
                     <TouchableOpacity onPress={()=> getRepositories() }>
@@ -26,7 +26,7 @@ const HomeScreen = ({navigation}) => {
                                         console.log('clicked')
                                     }}
                                 >
-                                    <Text >{item.name}</Text>
+                                    <Text >{item.commit.message}</Text>
                                 </TouchableOpacity>
                             )
                         }}
